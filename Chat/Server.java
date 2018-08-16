@@ -62,9 +62,9 @@ public class Server extends Application {
 						if(!serverSocket.isClosed()) { stopServer();}
 						break;
 						}
-					}
 				}
-			};
+			}
+		};
 			executorService.submit(runnable);
 	}
 	
@@ -155,6 +155,7 @@ public class Server extends Application {
 				}
 		};
 		executorService.submit(runnable);
+		}
 	}
 		
 
