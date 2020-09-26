@@ -116,6 +116,7 @@ public class Server extends Application {
 							
 							String data = new String(byteArr, 0, readByteCount, "UTF-8");
 							for(Client client : connections) {
+								// 연결되어있는 동안 클라이언트들끼리 보내기만 하기 때문에 send
 								client.send(data);
 							}
 						}
